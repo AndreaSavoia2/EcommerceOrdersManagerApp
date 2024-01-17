@@ -1,4 +1,4 @@
-#EcommerceOrdersManagerApp
+# EcommerceOrdersManagerApp
 
 Questa App eseguibile in linea di comando permette di leggere un file .csv contenente degli ordini fatti in un ecommerce e ottenere quale tra questi ordini ha:
 
