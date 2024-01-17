@@ -1,0 +1,14 @@
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\bin\Debug\net8.0\OrdersManagerApp.exe
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\bin\Debug\net8.0\OrdersManagerApp.deps.json
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\bin\Debug\net8.0\OrdersManagerApp.runtimeconfig.json
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\bin\Debug\net8.0\OrdersManagerApp.dll
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\bin\Debug\net8.0\OrdersManagerApp.pdb
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.GeneratedMSBuildEditorConfig.editorconfig
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.AssemblyInfoInputs.cache
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.AssemblyInfo.cs
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.csproj.CoreCompileInputs.cache
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.dll
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\refint\OrdersManagerApp.dll
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.pdb
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.genruntimeconfig.cache
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\ref\OrdersManagerApp.dll
