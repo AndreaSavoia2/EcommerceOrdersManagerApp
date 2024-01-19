@@ -7,9 +7,24 @@ OrdersManager ordersManager = new();
 
 if (ordersManager.ReadFile(file))
 {
-    Console.WriteLine($"Record con importo totale più alto:\n {ordersManager.GetMax()}\n");
+    Console.WriteLine("Records con importo totale più alto:");
+    foreach (var order in ordersManager.GetMax())
+    {
+        Console.WriteLine(order);
+    }
+    Console.WriteLine();
 
-    Console.WriteLine($"Record con quantità più alta:\n {ordersManager.GetQuantityMax()}\n");
+    Console.WriteLine("Records con quantità più alta:");
+    foreach (var order in ordersManager.GetQuantityMax())
+    {
+        Console.WriteLine(order);
+    }
+    Console.WriteLine();
 
-    Console.WriteLine($"Record con maggior differenza tra totale senza sconto e totale con sconto:\n {ordersManager.GetMaxDifference()}\n");
+    Console.WriteLine("Records con maggior differenza tra totale senza sconto e totale con sconto:");
+    foreach (var order in ordersManager.GetMaxDifference())
+    {
+        Console.WriteLine(order);
+    }
+    Console.WriteLine();
 }

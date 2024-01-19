@@ -11,7 +11,7 @@
 
                 string[] lines = File.ReadAllLines(file);
 
-                foreach (var record in lines)
+                foreach (string record in lines)
                 {
                     string[] fields = record.Split(',');
 
@@ -36,14 +36,24 @@
                 Console.WriteLine($"La dyrectory non è stata trovata ERROR:{e}\n");
                 return false;
             }
+            catch (FormatException e)
+            {
+                Console.WriteLine($"Errore nella formattazione dei dati ERROR: {e}\n");
+                return false;
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine($"Errore indice fuori intervallo ERROR: {e}\n");
+                return false;
+            }
 
             return true;
         }
 
-        public Order GetMax()
+        public List<Order> GetMax()
         {
             decimal max = decimal.MinValue;
-            Order maxRecord = null;
+            List<Order> maxRecords = new List<Order>();
 
             foreach (Order order in orders)
             {
@@ -52,37 +62,45 @@
                 if (discountedTotalPrice > max)
                 {
                     max = discountedTotalPrice;
-                    maxRecord = order;
+                    maxRecords.Clear();
+                    maxRecords.Add(order);
+                }
+                else if (order.Quantity == max)
+                {
+                    maxRecords.Add(order);
                 }
             }
 
-            return maxRecord;
+            return maxRecords;
         }
 
-        public Order GetQuantityMax()
+        public List<Order> GetQuantityMax()
         {
-
             decimal max = decimal.MinValue;
-            Order maxRecord = null;
+            List<Order> maxRecords = new List<Order>();
 
             foreach (Order order in orders)
             {
                 if (order.Quantity > max)
                 {
                     max = order.Quantity;
-                    maxRecord = order;
+                    maxRecords.Clear();
+                    maxRecords.Add(order);
                 }
-
+                else if (order.Quantity == max)
+                {
+                    maxRecords.Add(order);
+                }
             }
 
-            return maxRecord;
+            return maxRecords;
         }
 
-        public Order GetMaxDifference()
+        public List<Order> GetMaxDifference()
         {
 
-            decimal maxDifference = decimal.MinValue;
-            Order maxRecord = null;
+            decimal max = decimal.MinValue;
+            List<Order> maxRecords = new List<Order>();
 
             foreach (Order order in orders)
             {
@@ -90,14 +108,19 @@
                 decimal totalWithDiscount = totalWithoutDiscount * (1 - order.PercentageDiscount / 100);
                 decimal difference = totalWithoutDiscount - totalWithDiscount;
 
-                if (difference > maxDifference)
+                if (difference > max)
                 {
-                    maxDifference = difference;
-                    maxRecord = order;
+                    max = difference;
+                    maxRecords.Clear();
+                    maxRecords.Add(order);
+                }
+                else if (order.Quantity == max)
+                {
+                    maxRecords.Add(order);
                 }
             }
 
-            return maxRecord;
+            return maxRecords;
         }
 
     }
