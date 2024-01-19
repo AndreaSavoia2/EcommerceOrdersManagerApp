@@ -19,7 +19,7 @@
                     string article = fields[1];
                     int quantity = int.Parse(fields[2]);
                     decimal unitPrice = decimal.Parse(fields[3]);
-                    int percentageDiscount = int.Parse(fields[4]);
+                    decimal percentageDiscount = decimal.Parse(fields[4]);
                     string buyer = fields[5];
 
                     orders.Add(new Order(id, article, quantity, unitPrice, percentageDiscount, buyer));
@@ -47,20 +47,16 @@
 
             foreach (Order order in orders)
             {
-                decimal totalPrice = order.Quantity * order.UnitPrice;
-                decimal discount = (totalPrice * order.PercentageDiscount) / 100;
-                decimal discountedTotalPrice = totalPrice - discount;
+                decimal discountedTotalPrice = order.Quantity * order.UnitPrice * (1 - order.PercentageDiscount / 100);
 
                 if (discountedTotalPrice > max)
                 {
                     max = discountedTotalPrice;
                     maxRecord = order;
                 }
-
             }
 
             return maxRecord;
-
         }
 
         public Order GetQuantityMax()
@@ -84,14 +80,14 @@
 
         public Order GetMaxDifference()
         {
+
             decimal maxDifference = decimal.MinValue;
             Order maxRecord = null;
 
             foreach (Order order in orders)
             {
                 decimal totalWithoutDiscount = order.Quantity * order.UnitPrice;
-                decimal discountAmount = totalWithoutDiscount * order.PercentageDiscount / 100;
-                decimal totalWithDiscount = totalWithoutDiscount - discountAmount;
+                decimal totalWithDiscount = totalWithoutDiscount * (1 - order.PercentageDiscount / 100);
                 decimal difference = totalWithoutDiscount - totalWithDiscount;
 
                 if (difference > maxDifference)

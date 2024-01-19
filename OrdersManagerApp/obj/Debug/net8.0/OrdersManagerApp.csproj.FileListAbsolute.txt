@@ -12,3 +12,4 @@ F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\refint\OrdersM
 F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.pdb
 F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.genruntimeconfig.cache
 F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\ref\OrdersManagerApp.dll
+F:\Progetti c#\OrdersManagerApp\OrdersManagerApp\obj\Debug\net8.0\OrdersManagerApp.sourcelink.json

@@ -6,10 +6,10 @@
         private string article;
         private int quantity;
         private decimal unitPrice;
-        private int percentageDiscount;
+        private decimal percentageDiscount;
         private string buyer;
 
-        public Order(int id, string article, int quantity, decimal unitPrice, int percentageDiscount, string buyer)
+        public Order(int id, string article, int quantity, decimal unitPrice, decimal percentageDiscount, string buyer)
         {
             this.id = id;
             this.article = article;
@@ -43,7 +43,7 @@
             set { unitPrice = value; }
         }
 
-        public int PercentageDiscount
+        public decimal PercentageDiscount
         {
             get { return percentageDiscount; }
             set { percentageDiscount = value; }
